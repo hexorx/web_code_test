@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Articles</title>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css" rel="stylesheet"/>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet"/>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome-ie7.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+  </head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="span12">
+        <h2>Articles</h2>
+      </div>
+    </div>
+    <div id="view">
+    </div>
+  </div>
+
+<!--Templates-->
+  <script type="text/template" id="articles-template">
+    <div class="row">
+        {{ #articles }}
+          <div class="span4">
+            <div class="well">
+              {{ title }}
+            </div>
+          </div>
+        {{ /articles }}
+    </div>
+  </script>
+
+<!--Javascript-->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
+  <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+  <script src="/javascript/app.js"></script>
+</body>
+</html>
