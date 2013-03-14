@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <title>iTriage Web Test</title>
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+  </head>
+
+  <body>
+
+    <h1>iTriage Web Engineer Test</h1>
+
+    <h3>Summary</h3>
+    <p>This code test is given to every prospective new member of the iTriage Javascript development group. The goal of this test is to get a feel for your coding style, and problem solving skills. It is meant to be a simulation of a real day at work, so you are free to use whatever resources you have at your disposal in order to be successful. Please also feel free to bring in UI libraries that you might find helpful in creating a compelling user experience. 
+      <br/><br/>
+    Read the rest of this document to get an understanding of the expectations, and be sure to let someone know if you have any questions, run into any odd issues, or need some help getting over a hurdle.</p>
+
+    <h3>You will be assessed in 3 main areas:</h3>
+    <ul>
+      <li>Code organization and readability</li>
+      <li>Object oriented design patterns</li>
+      <li>Visual styling</li>
+    </ul>
+
+    <h3>Bonus points for:</h3>
+    <ul>
+      <li>Use of MV* design patterns</li>
+      <li>Animations and fallbacks</li>
+      <li>Compelling UI/UX</li>
+    </ul>
+
+    <h3>User stories</h3>
+    <ul>
+      <li>As a user, I would like to be able to browse a list of article categories.</li>
+      <li>As a user, I would like to set my preference for a article category. In other words, I would only like to see articles relating to the category I select.</li>
+      <li>As a user, I would like to see a list of articles for a category I have selected. As to not get overwhelmed, I would only like to see a listing of 5 articles at a time.</li>
+      <li>As a user, I would like to be able to view the next/previous 5 articles in the list.</li>
+      <li>As a user, I would like to click on an article and see it's full contents.</li>
+      <li>As a user, I would like some indication that I have read the article.</li>
+      <li>As a user, I would like to be able to save an article so I can read it later. I would also like to be able to 'unsave' them when I no longer need them so my list does not get too long. (Use of local broswer storage is fine here)</li>
+      <li>As a user, I would like to be able to view all my saved articles in a list.</li>
+    </ul>
+
+    <h3>Resources</h3>
+    <ul>
+      <li>A view called 'Articles' has been stubbed out already. Feel free to use it or create your own.</li>
+      <li>These calls require an installation ID. Use 'test1'</li>
+      <li>GET article categories
+        <ul><li>https://healthnews-feature-9.itriagehealth.com/api/v1/healthnews/article_categories.json?security_token=3ad9f621b96ce164dcea759fa11166cd6cc659ec</li></ul>
+      </li>
+      <li>PUT article category preferences
+        <ul><li>https://healthnews-feature-9.itriagehealth.com/api/v1/healthnews/preferences/test1.json</li></ul>
+        <strong>Parameters</strong>
+        <ul>
+          <li>{ "preference": { "article_category_ids": [category id] }, "security_token": "3ad9f621b96ce164dcea759fa11166cd6cc659ec" }</li>
+        </ul>
+      </li>
+      <li>GET articles
+        <ul><li>https://healthnews-feature-9.itriagehealth.com/api/v1/healthnews/preferred_articles.json?content=lite&installation_id=test1&security_token=3ad9f621b96ce164dcea759fa11166cd6cc659ec</li></ul>
+        <strong>Additional parameters</strong>
+        <ul>
+          <li>page=N</li>
+        </ul>
+      </li>
+    </ul>
+
+  </body>
+</html>
